@@ -100,13 +100,7 @@ body:before {
     rgba(2, 9, 22, 0.92)
   );
 }
-.intro__content {
-  position: absolute;
-  left: 24px;
-  right: 24px;
-  bottom: 110px;
-  text-align: center;
-}
+
 .intro h1 {
   font:
     400 clamp(3.4rem, 16vw, 6rem)/0.9 "Great Vibes",
