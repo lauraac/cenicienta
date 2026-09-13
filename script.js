@@ -70,17 +70,23 @@ function initIntro() {
     enableSound();
   });
 
-  const closeIntro = () => {
-    video.pause();
+const closeIntro = () => {
+  const musicBtn = document.getElementById('musicBtn');
 
-    intro.classList.add('is-hidden');
+  video.pause();
 
-    setTimeout(() => {
-      intro.style.display = 'none';
-    }, 750);
+  intro.classList.add('is-hidden');
 
-    window.startMusic?.();
-  };
+  setTimeout(() => {
+    intro.style.display = 'none';
+
+    // Mostrar botón de música al entrar a la invitación
+    musicBtn?.classList.add('show');
+  }, 750);
+
+  // Iniciar música
+  window.startMusic?.();
+};
 
   enterBtn.addEventListener('click', (e) => {
     e.stopPropagation();

@@ -159,6 +159,14 @@ body:before {
   font-size: 1.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.32);
   backdrop-filter: blur(14px);
+  opacity: 0;
+visibility: hidden;
+pointer-events: none;
+}
+.music-btn.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 .music-btn.playing {
   animation: pulse 1.8s infinite;
@@ -723,4 +731,22 @@ body:before {
   50% {
     transform: scale(1.08);
   }
+}
+
+/* Botón de música oculto mientras se reproduce la intro */
+.music-btn {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.25s ease;
+}
+
+/* Mostrar botón después de cerrar el video */
+.music-btn.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
