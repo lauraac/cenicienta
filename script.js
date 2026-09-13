@@ -31,13 +31,20 @@ function initIntro() {
   // Empieza oculto
   introContent?.classList.remove('show');
 
-  // Cuando el VIDEO llegue al segundo 10,
-  // aparece "Érase una vez... María Luciana · Mis XV años"
-  video.addEventListener('timeupdate', () => {
-    if (video.currentTime >= 10) {
-      introContent?.classList.add('show');
-    }
-  });
+// Mantener ocultas las letras al iniciar
+introContent?.classList.remove('show');
+
+// Revisar el tiempo real del video
+const introTextTimer = setInterval(() => {
+
+  if (video.currentTime >= 10) {
+    introContent?.classList.add('show');
+
+    // Ya apareció, no necesitamos seguir revisando
+    clearInterval(introTextTimer);
+  }
+
+}, 200);
 
   video.play().catch(() => {});
 
