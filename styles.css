@@ -604,6 +604,18 @@ body:before {
     height: 520px;
   }
 }
+.intro__content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.intro__content.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 /* ESTRELLAS MÁGICAS CON TU IMAGEN */
 .magic-star-img {
   position: fixed;
@@ -647,4 +659,34 @@ body:before {
     opacity: 0;
     transform: scale(0.3) rotate(-8deg);
   }
+}
+.parents {
+  margin: 25px auto;
+  text-align: center;
+}
+
+.parents .eyebrow {
+  margin-bottom: 12px;
+}
+
+.parents h3 {
+  margin: 5px 0;
+  font-family: "Cinzel", serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.parents span {
+  display: block;
+  margin: 5px 0;
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+}
+
+.event-date {
+  margin: 10px 0 25px;
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }

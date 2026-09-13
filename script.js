@@ -1,6 +1,6 @@
 const CONFIG = {
   // CAMBIA ESTA FECHA POR LA FECHA REAL DEL EVENTO
-  eventDate: '2026-12-05T18:30:00',
+  eventDate: '2026-10-31T18:30:00',
   // Si después conectas Google Apps Script, pega aquí tu URL.
   rsvpScriptUrl: ''
 };
