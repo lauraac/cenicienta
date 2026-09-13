@@ -750,3 +750,28 @@ pointer-events: none;
   visibility: visible;
   pointer-events: auto;
 }
+/* ===== TEXTO DE LA INTRO: APARECE AL SEGUNDO 10 ===== */
+
+.intro__content {
+  position: absolute !important;
+  left: 24px !important;
+  right: 24px !important;
+  bottom: 110px !important;
+
+  z-index: 20 !important;
+  text-align: center;
+
+  opacity: 0 !important;
+  visibility: hidden !important;
+
+  transform: translateY(25px);
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease;
+}
+
+.intro__content.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0);
+}
