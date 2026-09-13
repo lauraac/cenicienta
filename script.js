@@ -18,22 +18,41 @@ document.addEventListener('DOMContentLoaded', () => {
   initCinderellaStars();
 });
 
+
 function initIntro() {
   const intro = document.getElementById('intro');
   const video = document.getElementById('introVideo');
   const enterBtn = document.getElementById('enterBtn');
   const hint = document.getElementById('audioHint');
+  const introContent = document.querySelector('.intro__content');
+
   if (!intro || !video || !enterBtn) return;
+
+  // Empieza oculto
+  introContent?.classList.remove('show');
+
+  // Cuando el VIDEO llegue al segundo 10,
+  // aparece "Érase una vez... María Luciana · Mis XV años"
+  video.addEventListener('timeupdate', () => {
+    if (video.currentTime >= 10) {
+      introContent?.classList.add('show');
+    }
+  });
 
   video.play().catch(() => {});
 
   const enableSound = async () => {
     if (audioEnabled) return;
+
     try {
       audioEnabled = true;
       video.muted = false;
       video.volume = 1;
-      hint && (hint.style.display = 'none');
+
+      if (hint) {
+        hint.style.display = 'none';
+      }
+
       await video.play();
     } catch {
       audioEnabled = false;
@@ -41,18 +60,33 @@ function initIntro() {
   };
 
   intro.addEventListener('click', (e) => {
-    if (!e.target.closest('#enterBtn')) enableSound();
+    if (!e.target.closest('#enterBtn')) {
+      enableSound();
+    }
   });
-  hint?.addEventListener('click', (e) => { e.stopPropagation(); enableSound(); });
+
+  hint?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    enableSound();
+  });
 
   const closeIntro = () => {
     video.pause();
+
     intro.classList.add('is-hidden');
-    setTimeout(() => { intro.style.display = 'none'; }, 750);
+
+    setTimeout(() => {
+      intro.style.display = 'none';
+    }, 750);
+
     window.startMusic?.();
   };
 
-  enterBtn.addEventListener('click', (e) => { e.stopPropagation(); closeIntro(); });
+  enterBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeIntro();
+  });
+
   video.addEventListener('ended', closeIntro);
 }
 
