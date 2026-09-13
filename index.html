@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f2b5f" />
+  <title>Mis XV - Luciana</title>
+  <meta name="description" content="Invitación de XV años de Luciana inspirada en Cenicienta." />
+  <meta property="og:title" content="Mis XV - Luciana ✨" />
+  <meta property="og:description" content="Acompáñame a vivir una noche mágica inspirada en Cenicienta." />
+  <meta property="og:image" content="./img/portada.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="sparkles" id="sparkles"></div>
+
+  <div class="intro" id="intro">
+    <video id="introVideo" class="intro__video" playsinline muted preload="metadata" poster="./img/portada.jpg">
+      <source src="./img/intro.mp4" type="video/mp4" />
+    </video>
+    <div class="intro__shade"></div>
+    <button class="audio-hint" id="audioHint" type="button">🔊 Toca para escuchar</button>
+    <div class="intro__content">
+      <p class="eyebrow">Érase una vez...</p>
+      <h1>Luciana</h1>
+      <p class="intro__subtitle">Mis XV años</p>
+    </div>
+    <button id="enterBtn" class="enter-btn" type="button">Entrar al cuento ✨</button>
+  </div>
+
+  <button class="music-btn" id="musicBtn" type="button" aria-label="Reproducir música">♫</button>
+  <audio id="bgMusic" loop preload="none">
+    <source src="./img/musica.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main class="page-shell">
+    <section class="hero section-reveal" id="inicio">
+      <div class="hero__stars"></div>
+      <img class="hero__castle" src="./img/castillo.png" alt="Castillo de cuento" onerror="this.style.display='none'" />
+      <div class="hero__content">
+        <p class="eyebrow">Una noche para recordar</p>
+        <h2 class="script-title">Mis XV años</h2>
+        <h1 class="hero__name">Luciana</h1>
+        <p class="hero__text">Hay momentos que se sueñan toda la vida. Hoy quiero compartir contigo el inicio de un nuevo capítulo lleno de magia, ilusión y recuerdos inolvidables.</p>
+        <div class="date-chip">✨ Próximamente · 6:30 PM ✨</div>
+        <div class="hero__actions">
+          <a href="#detalles" class="btn btn--primary">Ver detalles</a>
+          <a href="#confirmacion" class="btn btn--ghost">Confirmar asistencia</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-card section-reveal">
+      <div class="glass-slipper-wrap">
+        <img src="./img/zapatilla.png" alt="Zapatilla de cristal" onerror="this.style.display='none'" />
+      </div>
+      <p>“No importa cuánto tarde la magia en llegar; cuando llega, cambia la historia para siempre.”</p>
+    </section>
+
+    <section class="section card section-reveal countdown-section">
+      <p class="eyebrow">El reloj ya comenzó</p>
+      <h2 class="section-title">Falta muy poco</h2>
+      <div class="countdown" id="countdown">
+        <div><span id="days">00</span><small>Días</small></div>
+        <div><span id="hours">00</span><small>Horas</small></div>
+        <div><span id="minutes">00</span><small>Min</small></div>
+        <div><span id="seconds">00</span><small>Seg</small></div>
+      </div>
+    </section>
+
+    <section class="section story section-reveal">
+      <p class="eyebrow">Capítulo I</p>
+      <h2 class="section-title">Había una vez...</h2>
+      <div class="story__media ornate-frame">
+        <img src="./img/foto1.jpg" alt="Luciana de niña" />
+      </div>
+      <p>Una pequeña llena de sueños, sonrisas y momentos que fueron escribiendo una historia maravillosa.</p>
+    </section>
+
+    <section class="section section-reveal">
+      <p class="eyebrow">Su historia</p>
+      <h2 class="section-title">De niña a quinceañera</h2>
+      <div class="carousel" id="carousel">
+        <button class="carousel__btn carousel__btn--prev" id="prevBtn" aria-label="Anterior">‹</button>
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="track">
+            <article class="slide"><img src="./img/foto1.jpg" alt="Recuerdo 1"><div><h3>Primeros sueños</h3><p>Donde comenzó una historia llena de ternura.</p></div></article>
+            <article class="slide"><img src="./img/foto2.jpg" alt="Recuerdo 2"><div><h3>Momentos mágicos</h3><p>Juegos, sonrisas y recuerdos que viven para siempre.</p></div></article>
+            <article class="slide"><img src="./img/foto3.jpg" alt="Recuerdo 3"><div><h3>Nuevos capítulos</h3><p>Cada año trajo nuevas aventuras y grandes sueños.</p></div></article>
+            <article class="slide"><img src="./img/foto4.jpg" alt="Recuerdo 4"><div><h3>Hoy</h3><p>Una nueva etapa comienza y queremos celebrarla contigo.</p></div></article>
+          </div>
+        </div>
+        <button class="carousel__btn carousel__btn--next" id="nextBtn" aria-label="Siguiente">›</button>
+      </div>
+      <div class="dots" id="dots"></div>
+    </section>
+
+    <section class="midnight-banner section-reveal">
+      <img src="./img/reloj.png" alt="Reloj de medianoche" onerror="this.style.display='none'" />
+      <div>
+        <p class="eyebrow">Antes de que el reloj marque las doce...</p>
+        <h2>Vive esta noche conmigo</h2>
+      </div>
+    </section>
+
+    <section class="section section-reveal" id="detalles">
+      <p class="eyebrow">Dónde comienza la magia</p>
+      <h2 class="section-title">Detalles del evento</h2>
+      <div class="event-grid">
+        <article class="event-card">
+          <span class="event-icon">⛪</span>
+          <h3>Misa</h3>
+          <p class="event-name">Iglesia de Santa Ana</p>
+          <p>6:30 p. m.</p>
+          <a class="btn btn--small btn--ghost" href="https://www.google.com/maps/search/?api=1&query=Iglesia+de+Santa+Ana" target="_blank" rel="noopener">Abrir en Maps</a>
+        </article>
+        <article class="event-card">
+          <span class="event-icon">🏰</span>
+          <h3>Recepción</h3>
+          <p class="event-name">Hotel El Español</p>
+          <p>Salón Tenerife · 9:00 p. m.</p>
+          <a class="btn btn--small btn--primary" href="https://www.google.com/maps/search/?api=1&query=Hotel+El+Español+Salon+Tenerife" target="_blank" rel="noopener">Abrir en Maps</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section carriage section-reveal">
+      <img src="./img/carruaje.png" alt="Carruaje de Cenicienta" onerror="this.style.display='none'" />
+      <div>
+        <p class="eyebrow">Código de vestimenta</p>
+        <h2 class="section-title">Formal</h2>
+        <p>Reserva el azul Cenicienta para la quinceañera. ✨</p>
+      </div>
+    </section>
+
+    <section class="section gifts section-reveal">
+      <p class="eyebrow">Un detalle especial</p>
+      <h2 class="section-title">Lluvia de sobres</h2>
+      <div class="envelope">💌</div>
+      <p>Tu presencia es el regalo más importante. Si deseas tener un detalle conmigo, tendremos lluvia de sobres.</p>
+    </section>
+
+    <section class="section section-reveal" id="confirmacion">
+      <p class="eyebrow">Serás parte de mi cuento</p>
+      <h2 class="section-title">Confirma tu asistencia</h2>
+      <form id="rsvpForm" class="rsvp-form">
+        <label>Nombre<input type="text" name="guestName" placeholder="Tu nombre" required /></label>
+        <label>Número de personas<select name="guestCount" required><option value="">Selecciona</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+        <label>¿Asistirás?<select name="attendance" required><option value="">Selecciona</option><option value="si">Sí, ahí estaré ✨</option><option value="no">No podré asistir</option></select></label>
+        <label>Mensaje<textarea name="message" rows="4" placeholder="Déjame un mensaje bonito"></textarea></label>
+        <button class="btn btn--primary btn--full" type="submit">Enviar confirmación ✨</button>
+        <p class="form-msg" id="formMsg"></p>
+      </form>
+    </section>
+
+    <section class="finale section-reveal">
+      <div class="finale__overlay"></div>
+      <div class="finale__content">
+        <p class="eyebrow">Y entonces...</p>
+        <h2 class="script-title">La magia apenas comienza</h2>
+        <p>Gracias por formar parte de este momento tan especial.</p>
+        <strong>Luciana · Mis XV años</strong>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
