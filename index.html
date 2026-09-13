@@ -28,71 +28,94 @@
 <body>
   <div class="sparkles" id="sparkles"></div>
 
+  <!-- VIDEO DE INICIO -->
   <div class="intro" id="intro">
-    <video id="introVideo" class="intro__video" playsinline muted preload="metadata" poster="./img/portada.jpg">
+    <video
+      id="introVideo"
+      class="intro__video"
+      playsinline
+      muted
+      preload="metadata"
+      poster="./img/portada.jpg"
+    >
       <source src="./img/intro.mp4" type="video/mp4" />
     </video>
+
     <div class="intro__shade"></div>
-    <button class="audio-hint" id="audioHint" type="button">🔊 Toca para escuchar</button>
+
+    <button
+      class="audio-hint"
+      id="audioHint"
+      type="button">
+      🔊 Toca para escuchar
+    </button>
+
     <div class="intro__content">
       <p class="eyebrow">Érase una vez...</p>
       <h1>María Luciana</h1>
       <p class="intro__subtitle">Mis XV años</p>
     </div>
-    <button id="enterBtn" class="enter-btn" type="button">Entrar al cuento ✨</button>
+
+    <button
+      id="enterBtn"
+      class="enter-btn"
+      type="button">
+      Entrar al cuento ✨
+    </button>
   </div>
 
-  <button class="music-btn" id="musicBtn" type="button" aria-label="Reproducir música">♫</button>
+  <!-- BOTÓN DE MÚSICA -->
+  <button
+    class="music-btn"
+    id="musicBtn"
+    type="button"
+    aria-label="Reproducir música">
+    ♫
+  </button>
+
   <audio id="bgMusic" loop preload="none">
     <source src="./img/musicaa.mp3" type="audio/mpeg" />
   </audio>
 
   <main class="page-shell">
-<section class="hero-image-section section-reveal" id="inicio">
 
-  <!-- Imagen principal: Mis XV - María Luciana -->
-  <img
-    src="./img/portada10.png"
-    alt="Mis XV años de María Luciana"
-    class="hero-main-image"
-  />
+    <!-- PORTADA PRINCIPAL -->
+    <section class="hero-image-section section-reveal" id="inicio">
 
-  <!-- Esto permanece en HTML -->
-  <div class="hero-image-info">
+      <img
+        src="./img/portada10.png"
+        alt="Mis XV años de María Luciana"
+        class="hero-main-image"
+      />
 
-    <div class="date-chip">
-      ✨ Sábado 31 de octubre de 2026 · 6:30 p. m. ✨
-    </div>
+      <div class="hero-image-info">
 
-    <div class="hero__actions">
-      <a href="#detalles" class="btn btn--primary">
-        Ver detalles
-      </a>
+        <div class="date-chip">
+          <span>✨ Sábado 31 de octubre de 2026 ✨</span>
+          <span>6:30 p. m.</span>
+        </div>
 
-      <a href="#confirmacion" class="btn btn--ghost">
-        Confirmar asistencia
-      </a>
-    </div>
+        <div class="hero__actions">
+          <a href="#detalles" class="btn btn--primary">
+            Ver detalles
+          </a>
 
-  </div>
+          <a href="#confirmacion" class="btn btn--ghost">
+            Confirmar asistencia
+          </a>
+        </div>
 
-</section>
-<section class="parents-image-section section-reveal">
+      </div>
+    </section>
 
-  <img
-    src="./img/padres.png"
-    alt="Padres de María Luciana"
-    class="parents-image"
-  />
-
-</section>
-<section class="magic-image-section section-reveal">
-  <img
-    src="./img/zapa.png"
-    alt="Zapatilla de cristal"
-    class="magic-image"
-  />
-</section>
+    <!-- PAPÁS -->
+    <section class="parents-image-section section-reveal">
+      <img
+        src="./img/padres.png"
+        alt="Padres de María Luciana"
+        class="parents-image"
+      />
+    </section>
 
     <section class="section card section-reveal countdown-section">
      <p class="eyebrow">El reloj ya comenzó</p>
